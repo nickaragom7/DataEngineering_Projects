@@ -1,9 +1,3 @@
-# pip install virtualenv
-# virtualenv venv
-# venv\Scripts\activate
-# source venv/bin/activate
-# pip install pandas
-
 
 import sqlite3
 import pandas as pd
@@ -21,10 +15,12 @@ CREATE TABLE IF NOT EXISTS titanic_tripulants (
 )
 ''')
 
+
+
 data.to_sql('titanic_tripulants', 
             conn, 
-            if_exists='append',
-            index=false)
+            if_exists = 'append',
+            index = False)
 
 conn.commit()
 conn.close()
